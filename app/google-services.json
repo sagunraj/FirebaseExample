@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "153328614024",
+    "firebase_url": "https://fireb-eg.firebaseio.com",
+    "project_id": "fireb-eg",
+    "storage_bucket": "fireb-eg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153328614024:android:287c697ebffa2be8",
+        "android_client_info": {
+          "package_name": "np.com.sagunraj.firebaseexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153328614024-9j7kos0qotjnb1nuvifoknsisdafm4mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnEiNWIdHY5pV_oBSwT6WteDhwKKln-90"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
