@@ -1,6 +1,7 @@
 package np.com.sagunraj.firebaseexample;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,6 +43,8 @@ public class SignUpActivity extends AppCompatActivity {
                     public void onSuccess(AuthResult authResult) {
                         progressDialog.dismiss();
                         Toast.makeText(SignUpActivity.this, "User registered successfully.", Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(SignUpActivity.this, MainActivity.class);
+                        startActivity(i);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

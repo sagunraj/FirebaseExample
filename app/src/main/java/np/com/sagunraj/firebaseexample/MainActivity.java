@@ -28,7 +28,9 @@ ProgressDialog progressDialog;
         loginBtn = findViewById(R.id.loginBtn);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
+
         mAuth = FirebaseAuth.getInstance();
+
         progressDialog = new ProgressDialog(MainActivity.this);
         progressDialog.setMessage("Logging you in!");
         signupBtn.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +49,8 @@ ProgressDialog progressDialog;
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         progressDialog.dismiss();
+                        Intent i = new Intent(MainActivity.this, DashboardActivity.class);
+                        startActivity(i);
                         Toast.makeText(MainActivity.this, "Successfully logged in.", Toast.LENGTH_LONG).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
