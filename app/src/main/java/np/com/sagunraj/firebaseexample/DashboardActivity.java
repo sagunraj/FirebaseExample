@@ -1,6 +1,7 @@
 package np.com.sagunraj.firebaseexample;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,7 +24,7 @@ import java.util.List;
 
 public class DashboardActivity extends AppCompatActivity {
     EditText rollno, name;
-    Button saveBtn;
+    Button saveBtn, storageBtn;
     ListView lv;
     DatabaseReference databaseReference;
     ProgressDialog progressDialog;
@@ -33,6 +34,7 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        storageBtn = findViewById(R.id.btnStorage);
         rollno = findViewById(R.id.rollno);
         name = findViewById(R.id.name);
         saveBtn = findViewById(R.id.saveBtn);
@@ -40,6 +42,16 @@ public class DashboardActivity extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference().child("user");
         progressDialog = new ProgressDialog(DashboardActivity.this);
         progressDialog.setMessage("Saving your data...");
+
+        storageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent inte = new Intent(DashboardActivity.this, StorageActivity.class);
+                startActivity(inte);
+            }
+        });
+
+
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

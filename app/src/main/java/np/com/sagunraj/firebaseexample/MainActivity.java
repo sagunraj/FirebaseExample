@@ -32,7 +32,7 @@ ProgressDialog progressDialog;
         mAuth = FirebaseAuth.getInstance();
 
         progressDialog = new ProgressDialog(MainActivity.this);
-        progressDialog.setMessage("Logging you in!");
+        progressDialog.setMessage("Logging you in...");
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

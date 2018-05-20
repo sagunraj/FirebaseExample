@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="np.com.sagunraj.firebaseexample">
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".StorageActivity"></activity>
     </application>
 
 </manifest>
